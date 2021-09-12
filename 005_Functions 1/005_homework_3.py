@@ -1,5 +1,5 @@
 def cont():
-    c = input("Хотите прекратить вычисления? Если Да, введите Y: ")
+    c = input("Do you want to stop computing? Enter Y if yes: ")
     while True:
         if c == "Y":
             return None
@@ -7,33 +7,33 @@ def cont():
             return main()
 
 
-def div(d, x, y):
+def div(x, y):
     if y == 0:
-        y = input("Деление на ноль невозможно. Введите другое второе число y: ")
+        y = input("Division by zero is not possible. Please enter another second number y: ")
         y = float(y)
-        div(d, x, y)
+        div(x, y)
     else:
-        print(f"Результат: {(x / y):.3f}")
+        print(f"Result: {(x / y):.3f}")
 
 
 def mul(x, y):
-    print(f"Результат: {(x * y):.3f}")
+    print(f"Result: {(x * y):.3f}")
 
 
 def add(x, y):
-    print(f"Результат: {(x + y):.3f}")
+    print(f"Result: {(x + y):.3f}")
 
 
 def sub(x, y):
-    print(f"Результат: {(x - y):.3f}")
+    print(f"Result: {(x - y):.3f}")
 
 
 def main():
-    x = float(input('Введите первое число: '))
-    d = input('Введите тип операции над числами: ')
-    y = float(input('Введите второе число: '))
+    x = float(input('Enter the first number: '))
+    d = input('Enter the type of operation on numbers: ')
+    y = float(input('Enter the second number: '))
     if d == '/':
-        div(d, x, y)
+        div(x, y)
     elif d == '*':
         mul(x, y)
     elif d == '+':
